@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #3aa43d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    /* Add additional design properties */
+}
+
+header h1 {
+    margin: 5;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+
+/* Existing styles */
+.product-container, .cart-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.container-wrapper {
+    display: grid; /* Use grid layout */
+    grid-template-columns: 70% 29%; /* Set the columns widths */
+    grid-column-gap: 1%; /* Add a gap between the columns */
+}
+
+.product-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: #f9f9f9;
+    font-weight: bold;
+    width: 45%;
+    float: right;
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    text-align: center; /* Center text */
+}
+
+.cart-item {
+    border: 1px solid #ccc;
+    margin: 5px 0;
+    margin-top:5px;
+    padding: 10px;
+    border-radius: 3px;
+    font-weight: bold;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-item button {
+    background-color: #ccc; /* Red color for delete button */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+img {
+    width: 80px;
+    height: 80px;
+}
+
+#total-price {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Existing styles */
+.quantity-box {
+    border: none;
+    font-weight: bold; /* Set font weight to bold */
+    display: flex; /* Use flexbox layout */
+    align-items: center; /* Center items vertically */
+}
+
+.quantity-box p {
+    margin-right: 10px; /* Add some spacing between the label and the quantity number */
+}
+
+.quantity-number {
+    margin-left: auto; /* Push the quantity number to the right */
+    background-color: white; /* Set background color of the quantity number box */
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 5px; /* Adjust padding as needed */
+}
+

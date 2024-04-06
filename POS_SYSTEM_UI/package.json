@@ -1,0 +1,16 @@
+{
+  "name": "pos_system_ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "POS_UI_NEW.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql": "^2.18.1"
+  }
+}

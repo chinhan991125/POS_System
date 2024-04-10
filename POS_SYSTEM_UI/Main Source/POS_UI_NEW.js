@@ -1,10 +1,10 @@
 var products = [
-    {id: 1, name: 'Product 1', price: 10, image: 'product1.jpg'},
-    {id: 2, name: 'Product 2', price: 20, image: 'product2.jpg'},
-    {id: 3, name: 'Product 3', price: 30, image: 'product3.jpg'},
-    {id: 4, name: 'Product 4', price: 40, image: 'Mineral Water.jpg'},
-    {id: 5, name: 'Product 5', price: 50, image: 'watches.jpg'},
-    {id: 6, name: 'Product 6', price: 60, image: 'panadol.jpg'}
+    {id: 1, name: 'Product 1', price: 10, image: 'Product Image/product1.jpg'},
+    {id: 2, name: 'Product 2', price: 20, image: 'Product Image/product2.jpg'},
+    {id: 3, name: 'Product 3', price: 30, image: 'Product Image/product3.jpg'},
+    {id: 4, name: 'Product 4', price: 40, image: 'Product Image/Mineral Water.jpg'},
+    {id: 5, name: 'Product 5', price: 50, image: 'Product Image/watches.jpg'},
+    {id: 6, name: 'Product 6', price: 60, image: 'Product Image/panadol.jpg'}
 ];
 var cart = [];
 
@@ -67,7 +67,7 @@ function renderCart() {
             <div><h3>${product.name}</h3></div>
             <div><p>Price: $${product.price}</p></div>
             <div class="quantity-box"> <!-- Added class for quantity box -->
-                <p>Quantity:</p> <!-- Label for quantity -->
+                <p>Quantity:</p> <!-- /Label for quantity -->
                 <div class="quantity-number">${product.quantity}</div> <!-- Quantity number box -->
             </div>
             <button onclick="removeFromCart(${product.id})">&#10060;</button>
@@ -79,10 +79,6 @@ function renderCart() {
 
     document.getElementById('total-price-value').innerText = totalPrice;
 }
-
-
-
-
 
 
 renderProducts();

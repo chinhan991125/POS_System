@@ -16,11 +16,14 @@
         <div class="cart-container">
             <h2>Shopping Cart</h2>
             <div id="cart-list"></div>
+            <!-- Moved the total price inside the cart container -->
+            <div id="total-price">
+                <h3>Total: $<span id="total-price-value">0</span></h3>
+                <button id="checkout-button">Checkout</button>
+                <!-- <button id="delete-button">Delete</button> -->
+            </div>
         </div>
     <div>
-    <div id="total-price">
-        <h3>Total: $<span id="total-price-value">0</span></h3>
-    </div>
 
     <script src="POS_UI_NEW.js"></script>
 </body>

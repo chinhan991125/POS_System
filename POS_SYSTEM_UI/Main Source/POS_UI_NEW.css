@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
@@ -5,22 +6,34 @@ body {
     padding: 0;
 }
 
+img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover; /* Ensure images cover the space without distorting */
+}
+
+/* Header */
 header {
     background-color: #3aa43d;
     color: white;
     padding: 20px;
     text-align: center;
-    /* Add additional design properties */
 }
 
 header h1 {
-    margin: 5;
+    margin: 0;
     font-size: 36px;
     font-weight: bold;
 }
 
+/* Layout */
+.container-wrapper {
+    display: grid;
+    grid-template-columns: 70% 29%;
+    grid-column-gap: 1%;
+}
 
-/* Existing styles */
+/* Product & Cart Containers */
 .product-container, .cart-container {
     border: 1px solid #ccc;
     padding: 20px;
@@ -29,41 +42,40 @@ header h1 {
     background-color: white;
 }
 
-.container-wrapper {
-    display: grid; /* Use grid layout */
-    grid-template-columns: 70% 29%; /* Set the columns widths */
-    grid-column-gap: 1%; /* Add a gap between the columns */
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: calc(100vh - 40px);
+    position: relative;
+    overflow: auto;
 }
 
-.product-item {
+/* Product & Cart Items */
+.product-item, .cart-item {
     border: 1px solid #ccc;
     padding: 10px;
     margin: 10px;
     border-radius: 20px;
     background-color: #f9f9f9;
     font-weight: bold;
+    text-align: center;
+}
+
+.product-item {
     width: 45%;
     float: right;
-    flex-direction: column; /* Arrange items vertically */
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
-    text-align: center; /* Center text */
 }
 
 .cart-item {
-    border: 1px solid #ccc;
     margin: 5px 0;
-    margin-top:5px;
-    padding: 10px;
     border-radius: 3px;
-    font-weight: bold;
-    background-color: #f9f9f9;
     display: flex;
     justify-content: space-between;
 }
 
 .cart-item button {
-    background-color: #ccc; /* Red color for delete button */
+    background-color: #f9f9f9;
     color: white;
     border: none;
     padding: 8px 15px;
@@ -89,38 +101,78 @@ button {
     border-radius: 3px;
 }
 
-img {
-    width: 80px;
-    height: 80px;
+button:hover {
+    background-color: #367a31; /* Darker shade of green */
 }
 
+.cart-item button:hover {
+    background-color: #a9a9a9; /* Darker shade of gray */
+}
+
+
+/* Total Price & Checkout Button */
 #total-price {
-    position: fixed;
-    bottom: 0;
-    right: 0;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
     background-color: white;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Existing styles */
+#checkout-button {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: bold;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+#total-price h3 {
+    margin: 0;
+    flex-grow: 1;
+}
+
+/* Quantity Box */
 .quantity-box {
-    border: none;
-    font-weight: bold; /* Set font weight to bold */
-    display: flex; /* Use flexbox layout */
-    align-items: center; /* Center items vertically */
+    display: flex;
+    align-items: center;
 }
 
 .quantity-box p {
-    margin-right: 10px; /* Add some spacing between the label and the quantity number */
+    margin-right: 10px;
 }
 
 .quantity-number {
-    margin-left: auto; /* Push the quantity number to the right */
-    background-color: white; /* Set background color of the quantity number box */
+    margin-left: auto;
+    background-color: white;
     border: 1px solid #ccc;
     border-radius: 3px;
-    padding: 5px; /* Adjust padding as needed */
+    padding: 5px;
 }
 
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .product-item, .cart-item {
+        width: auto;
+    }
+
+    #total-price {
+        position: static;
+        margin: 20px;
+    }
+}

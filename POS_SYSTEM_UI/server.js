@@ -7,10 +7,10 @@ const port = 3000; // You can use any port number
 // MySQL connection pool
 const pool = mysql.createPool({
     connectionLimit: 10, // Maximum number of connections in the pool
-    host: 'localhost', // Database host
+    host: 'localhost:3306', // Database host
     user: 'root', // Database user
     password: 'Intel@123', // Database password
-    database: 'pointofsale' // Database name
+    database: 'pos_system' // Database name
 });
 
 // Serve static files from the 'Main Source' directory
@@ -28,7 +28,7 @@ app.get('/api/products', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '/public/POS_UI_NEW.html'));
+  res.sendFile(path.join(__dirname, '/Main Source/POS_UI_NEW.html'));
 });
 
 app.listen(port, () => {

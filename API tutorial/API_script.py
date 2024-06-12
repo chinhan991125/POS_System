@@ -1,3 +1,5 @@
+import sys
+sys.path.append("c:\\users\\chinhanl\\appdata\\local\\programs\\python\\python38\\lib\\site-packages")
 from flask import Flask, request, jsonify
 from flask_cors import CORS  # Import CORS
 from db_connector import insert_transaction_with_products
@@ -24,4 +26,4 @@ def upload_transaction():
         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)

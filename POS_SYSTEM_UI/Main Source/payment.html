@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment - SuperMart POS System</title>
+    <link rel="stylesheet" type="text/css" href="POS_UI_NEW.css">
+</head>
+<body>
+    <header>
+        <h1>Payment</h1>
+    </header>
+    <div class="container-wrapper">
+        <div class="cart-container">
+            <h2>Order Summary</h2>
+            <div id="order-summary"></div>
+            <div id="payment-options">
+                <h3>Select Payment Method</h3>
+                <div class="payment-method" data-method="credit_card" onclick="selectPaymentMethod('credit_card')">
+                    <img src="Payment Image/visa_icon.png" alt="Credit Card">
+                    <p>Credit Card</p>
+                </div>
+                <div class="payment-method" data-method="touch_n_go" onclick="selectPaymentMethod('touch_n_go')">
+                    <img src="Payment Image/tngo.png" alt="Touch n Go">
+                    <p>Touch n Go</p>
+                </div>
+                <div class="payment-method" data-method="bank_transfer" onclick="selectPaymentMethod('bank_transfer')">
+                    <img src="Payment Image/fpx.png" alt="Bank Transfer">
+                    <p>Bank Transfer</p>
+                </div>
+            </div>
+            <button id="pay-button" onclick="processPayment()">Pay</button>
+        </div>
+    </div>
+
+    <script src="payment.js"></script>
+</body>
+</html>

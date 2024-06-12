@@ -7,6 +7,25 @@
 <body>
     <header>
         <h1>HarmoneyHaven</h1>
+        <!-- Integrated Region Selection in the Header for a Cohesive Layout -->
+        <div class="region-selection">
+            <label for="region-select">Select your region:</label>
+            <select id="region-select">
+                <option value="BA">BA</option>
+                <option value="DF">DF</option>
+                <option value="ES">ES</option>
+                <option value="GO">GO</option>
+                <option value="MG">MG</option>
+                <option value="MS">MS</option>
+                <option value="MT">MT</option>
+                <option value="PB">PB</option>
+                <option value="PR">PR</option>
+                <option value="RJ">RJ</option>
+                <option value="RS">RS</option>
+                <option value="SP">SP</option>
+                <option value="SC">SC</option>
+            </select>
+        </div>
     </header>
     <div class="container-wrapper">
         <div class="product-container">
@@ -16,13 +35,14 @@
         <div class="cart-container">
             <h2>Shopping Cart</h2>
             <div id="cart-list"></div>
-            <!-- Moved the total price inside the cart container -->
             <div id="total-price">
                 <h3>Total: $<span id="total-price-value">0</span></h3>
+                <!-- Add this inside your body tag, where appropriate -->
+                <button id="update-prices-button">Update Prices</button>
                 <button id="checkout-button" onclick="checkout()">Checkout</button>
             </div>
         </div>
-    <div>
+    </div>
 
     <script src="POS_UI_NEW.js"></script>
 </body>
